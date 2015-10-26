@@ -2,12 +2,18 @@
 from django.core.management.base import BaseCommand
 from ...models import Poll, Option
 
+import redis
+cache = redis.StrictRedis(host='127.0.0.1', port=6379, db=0)
+
 
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
+        options = [1, 2, 3, 4]
         Poll.objects.filter(id=1).delete()
-        Option.objects.filter(id__in=[1, 2, 3, 4]).delete()
+        Option.objects.filter(id__in=options).delete()
+
+        [cache.delete('votacao:option:{}'.format(opt)) for opt in options]
 
         question = Poll.objects.create(id=1, title="Quem deve ser o vencedor")
 
