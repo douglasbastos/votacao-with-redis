@@ -30,3 +30,19 @@ def incluir_voto_redis(request):
     context = {'text': 'Seu voto foi realizado com sucesso no REDIS'}
 
     return render(request, 'votacao_with_redis/voto_ok.html', context)
+
+
+def resultado_mysql(request):
+    options = Option.objects.all().order_by('-votes')
+    context = {'options': options}
+    return render(request, 'votacao_with_redis/voto_ok.html', context)
+
+
+def resultado_redis(request):
+    option1 = cache.get('ranking:option:1')
+    option2 = cache.get('ranking:option:2')
+    option3 = cache.get('ranking:option:3')
+    option4 = cache.get('ranking:option:4')
+    context = {'votes': sorted([option1, option2, option3, option4], reverse=True)}
+
+    return render(request, 'votacao_with_redis/voto_ok.html', context)
