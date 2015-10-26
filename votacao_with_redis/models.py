@@ -16,7 +16,7 @@ class Poll(models.Model):
 class Option(models.Model):
     name = models.CharField('Opção', max_length=55)
     pool_id = models.ForeignKey(Poll)
-    count = models.IntegerField()
+    votes = models.IntegerField('Total de votos')
 
     class Meta:
         verbose_name = "option"
