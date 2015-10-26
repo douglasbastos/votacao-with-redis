@@ -1,3 +1,8 @@
+# Created by https://www.gitignore.io
+
+#!! ERROR: python django sublime m is undefined. Use list command to see defined gitignore types !!#
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -55,3 +60,39 @@ docs/_build/
 
 # PyBuilder
 target/
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+
+### Sass ###
+.sass-cache
+*.css.map
+
+*.DS_Store
+
+### Redis ###
+
+*.rdb
