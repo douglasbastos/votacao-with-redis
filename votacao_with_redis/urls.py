@@ -4,6 +4,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^vote/$', views.incluir_voto_mysql, name='vote'),
-    # url(r'^(?P<id>[0-9]+)/resultado$', views.DetailPost.as_view(), name='vote'),
+    url(r'^mysql/vote/$', views.incluir_voto_mysql, name='vote_mysql'),
+    url(r'^redis/vote/$', views.incluir_voto_redis, name='vote_redis'),
 ]
