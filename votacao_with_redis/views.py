@@ -2,10 +2,14 @@
 import random
 from django.shortcuts import render
 from django.views.decorators.cache import never_cache
-from .models import Poll, Option
+from .models import Option
+from django.conf import settings
+
 
 import redis
-cache = redis.StrictRedis(host='127.0.0.1', port=6379, db=0)
+cache = redis.StrictRedis(host=settings.REDIS_DB['host'],
+                          port=settings.REDIS_DB['port'],
+                          db=settings.REDIS_DB['db'])
 
 
 @never_cache
