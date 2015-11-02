@@ -27,10 +27,10 @@ Execute o comando para criar votação na base de dados
 Após você pode executar teste de carga entre as duas urls.
 
     Mysql
-    http://www.mysite.com/mysql/vote/
+    http://www.mysite.com/votacao/mysql/vote/
 .
 
     Redis
-    http://www.mysite.com/redis/vote/
+    http://www.mysite.com/votacao/redis/vote/
 
 Você pode usar o [siege](https://www.joedog.org/siege-manual/) para realizar esses testes
