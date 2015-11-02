@@ -1,7 +1,7 @@
 Poc - Redis vs Relacional. 
 ===================
 
-#### Múltiplos Insertes.
+#### Múltiplas Inserções.
 Prova de conceito entre o uso do banco chave-valor Redis se saíra melhor em questão de performance comparado com um relacional quando muitas requisições de insertes a base de dados.
 
 #### Instalação
