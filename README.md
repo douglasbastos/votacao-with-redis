@@ -22,6 +22,7 @@ Django >= 1.8
     }
 
 Execute o comando para criar votação na base de dados
+    
     $ ./manager.py gera_votacao
 
 Após você pode executar teste de carga entre as duas urls.
