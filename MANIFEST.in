@@ -1,0 +1,2 @@
+recursive-include votacao_with_redis/templates *
+recursive-include votacao_with_redis/static *
